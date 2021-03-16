@@ -5,7 +5,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <img src="assets/img/avatar.png" class="center" />
+  <div>
+    <p>Guess The Number (1-10)</p>
+    <input [(ngModel)]="userNumber" type="number" /><br />
+    <ion-button (click)="check()">Guess</ion-button>
+    <span *ngIf="match">
+      <img src="assets/img/avatar.png" class="center" />
+    </span>
+  </div>
   <h1>John Appleseed</h1>
   <h2>Website Developer</h2>
   <h2>john.appleseed@icloud.com</h2>
